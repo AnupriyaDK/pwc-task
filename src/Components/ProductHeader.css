@@ -1,0 +1,50 @@
+.header-container{
+    display:flex;
+    justify-content:space-between;
+    align-items: center;
+    padding: 20px 40px;
+    box-shadow: 0px 5px 20px #01244633;
+    background-color: #fff;
+}
+
+.iconContainer{
+    display: flex;
+    justify-content: space-between;
+}
+.iconContainer div {
+    margin-right: 10px;
+    box-shadow: 0px 3px 6px #00000029;
+    background-color: #E6F0FF;
+    border-radius: 25px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center ;
+}
+
+.order {
+    letter-spacing: 0.6px;
+    color: #B7935A;
+    font-weight: 550;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+.organizationName {
+    font-size: 16px;
+    letter-spacing: 1.2px;
+    color: #000000;
+}
+.detailsContainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.zelda {
+    letter-spacing: 0px;
+    color: #2D4263;
+    font-size: 32px;
+}
+    

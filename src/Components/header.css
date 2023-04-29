@@ -1,0 +1,48 @@
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+  }
+  
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  button {
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .login-form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+  }
+  
+  .login-form input {
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 4px;
+    border: none;
+  }
+  .logo{
+    height: 10vh;
+  }
+  .loginbtn{
+    margin-left: 15px;
+  }
+  input{
+    margin-left: 10px;
+  }
+  .username{
+    margin-right: 10px;
+  }
+  .username{
+    margin-right: 10px;
+  }

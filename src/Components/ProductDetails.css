@@ -1,0 +1,21 @@
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    /* width: 100%; */
+    /* grid-template-columns: repeat(auto-fit, minmax(20%, 1fr));
+    grid-gap: 10px; */
+
+}
+
+.card {
+    width: 250px;
+    height: 450px;
+    box-shadow: 0px 3px 10px #00000029;
+    border-radius: 5px;
+}
+
+.card-img {
+    object-fit: contain;
+    height: 270px;
+    width: 100%;
+}

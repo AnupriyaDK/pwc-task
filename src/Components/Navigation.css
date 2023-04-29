@@ -1,0 +1,26 @@
+.container{
+    display:flex;
+    justify-content: space-between;
+    box-shadow: 0px 5px 20px #2F3F5880;
+    border-radius: 0px 0px 20px 20px;
+    margin: 0px 10px;
+    padding: 18px 30px 10px 30px;
+    color: #fff;
+    background-color: #2D4263;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 500px;
+}
+
+.nav > div{ 
+    padding-bottom: 10px;
+    border-bottom: 1px solid #2D4263;
+    text-transform: uppercase;
+}
+.nav > div:first-child {
+    border-bottom: 1px solid #fff;
+}
