@@ -4,6 +4,7 @@ import SearchIcon from '@mui/icons-material/Search';
 import NotificationsNoneOutlinedIcon from '@mui/icons-material/NotificationsNoneOutlined';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import AccountCircleOutlinedIcon from '@mui/icons-material/AccountCircleOutlined';
+import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlined';
 import './ProductHeader.css';
 import { Badge } from '@mui/material';
 
@@ -40,7 +41,7 @@ function ProductHeader(){
                     </Badge>
                     </div>
                     <div>
-                        <AccountCircleOutlinedIcon/>
+                        <FavoriteBorderOutlinedIcon/>
                     </div>
                
                     <div>

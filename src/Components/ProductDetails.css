@@ -1,21 +1,92 @@
 .card-container {
-    display: flex;
-    flex-wrap: wrap;
-    /* width: 100%; */
-    /* grid-template-columns: repeat(auto-fit, minmax(20%, 1fr));
-    grid-gap: 10px; */
-
+    display: grid;
+    /* flex-wrap: wrap; */
+    width: 100%;
+    grid-template-columns: repeat(auto-fit, minmax(25%, 1fr));
+    grid-gap: 10px;
 }
 
-.card {
+.heading {
+    display: flex;
+    justify-content: space-between;
+    padding:20px
+}
+
+.card-container  .card {
     width: 250px;
     height: 450px;
     box-shadow: 0px 3px 10px #00000029;
     border-radius: 5px;
+    text-align: center;
 }
 
-.card-img {
+.card-container  .card .item-text {
+    font-size: 16px;
+    font-weight: 550;
+    height: 20px;
+    text-overflow: ellipsis;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    word-wrap: break-word;
+    color: #2D4263;
+    margin-bottom: 10px;
+}
+
+.card-container  .card .cat-text {
+    font-size: 10px;
+    font-weight: 400;
+    color: #2D4263;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.card-container  .card .cat-price {
+    font-size: 14px;
+    font-weight: 500;
+    color: #222222;
+    text-transform: uppercase;
+   
+}
+
+.price {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.card-container  .card .cat-price-strike {
+    font-size: 12px;
+    font-weight: 500;
+    color: #9B9B9B;
+    text-decoration: line-through;
+    margin-left: 10px;
+}
+
+
+
+.card-container .card-img {
     object-fit: contain;
     height: 270px;
     width: 100%;
+}
+
+.all-text {
+    font-weight: 550;
+    color: #2D4263;
+}
+
+.found-text {
+    color: #BCBCBC;
+    font-weight: 500;
+}
+
+.non-img-content {
+    border-top: 1px solid #B9D0F2;
+    padding-top: 10px;
+}
+
+.btn {
+    background-color: #2D4263 !important;
+    width: 120px !important;
 }

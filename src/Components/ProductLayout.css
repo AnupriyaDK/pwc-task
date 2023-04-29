@@ -3,4 +3,24 @@
    display: flex;
    flex-wrap: nowrap;
    padding: 20px;
+   width: 100%;
 }
+
+.menu-nav { 
+   width: 20%;
+   margin-right: 3%;
+   background-color: #fff;
+   padding: 12px;
+   box-shadow: 0px 5px 20px #6170881A;
+   border-radius: 10px;
+}
+
+.product-list {
+   width: 77%;
+   background-color: #fff;
+   padding: 12px;
+   box-shadow: 0px 5px 20px #6170881A;
+   border-radius: 10px;
+   height: calc(100vh - 120px);
+   overflow-y: auto;
+ }
