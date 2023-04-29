@@ -8,7 +8,7 @@ import CheckboxesGroup from  './checkBox/checkBox'
 
 export default function SimpleAccordion() {
   return (
-    <div>
+    <div className='menu-box'>
       <Accordion>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}

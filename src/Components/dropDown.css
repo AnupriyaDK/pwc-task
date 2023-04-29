@@ -9,3 +9,10 @@ fieldset {
     box-shadow: none !important;
     border: none !important;
 }
+
+.menu-box {
+    overflow-y: auto;
+    height: calc(100vh - 180px);
+    margin: 0px 4px;
+    /* padding: 16px; */
+}
