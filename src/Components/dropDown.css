@@ -4,3 +4,8 @@ fieldset {
     color: #fff !important;
     opacity: 0.4 !important;
 }
+
+.MuiPaper-root  {
+    box-shadow: none !important;
+    border: none !important;
+}
