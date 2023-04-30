@@ -12,7 +12,7 @@
 .heading {
     display: flex;
     justify-content: space-between;
-    padding:20px
+    padding: 0px 20px;
 }
 
 .card-container  .card {
@@ -196,6 +196,7 @@
     border-radius: 12px; 
     box-shadow: 24px; 
     padding: 4px;
+    border: none !important;
     background-color: #fff;
 } 
 
@@ -209,14 +210,13 @@
 .modal-heading {
     font-size: 24px;
     color: #717070;
+    padding: 20px;
 }
 
 .modal-body {
-    padding: 10px;
     border-bottom: 5px solid #D0D9E5;
     display: flex;
     justify-content: space-between;
-    align-items: center;
     height: 350px;
 }
 
@@ -227,6 +227,11 @@
     flex-wrap: nowrap;
     justify-content: center;
     align-items: center;
+    padding: 20px;
+}
+
+.option-selection {
+    width: 50%;
 }
 
 .modal-img img {
@@ -245,6 +250,15 @@
 }
 
 .modal-footer {
-    padding: 10px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
 }
+
+.btn-modal {
+    margin-left: 10px !important;
+    background-color: #2D4263 !important;
+}
+
+
      

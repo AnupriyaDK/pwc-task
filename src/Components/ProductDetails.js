@@ -12,6 +12,11 @@ import ListOutlinedIcon from '@mui/icons-material/ListOutlined';
 import GridViewOutlinedIcon from '@mui/icons-material/GridViewOutlined';
 import CloseIcon from '@mui/icons-material/Close';
 
+import BasicSelect from './select/select';
+import ToggleButtons from './toggle/toggle';
+
+import IncrementDecrementInput from './count-box/countBox';
+
 import ButtonGroup from '@mui/material/ButtonGroup';
 import Modal from '@mui/material/Modal';
 import Box from '@mui/material/Box';
@@ -107,9 +112,18 @@ function ProductDetails(){
                                                         Product price: <span className="cat-price">$ {item.price}</span>
                                                     </div> 
                                                 </div>
+                                                <div className="option-selection">
+                                                    <BasicSelect />
+                                                    <ToggleButtons />
+                                                    <ToggleButtons />
+                                                </div>
                                             </div>
                                             <div className="modal-footer">
-                                            
+                                                <div></div>
+                                                <div>
+                                                    <IncrementDecrementInput />
+                                                    <Button  className="btn-modal" variant="contained">Add</Button>
+                                                </div>
                                             </div>
                                         </Box>
                                     </Modal> 
