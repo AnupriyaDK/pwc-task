@@ -16,3 +16,13 @@ fieldset {
     margin: 0px 4px;
     /* padding: 16px; */
 }
+
+.Mui-expanded {
+    box-shadow: none !important;
+    margin: 0px !important;
+    border: 1px solid #2D4263 !important;
+}
+
+.MuiAccordionSummary-content {
+    margin: 0px !important;
+}
