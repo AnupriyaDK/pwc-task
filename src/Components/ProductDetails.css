@@ -27,13 +27,13 @@
 .fav {
     position: absolute;
     top: 0;
-    left: 0
+    right: 0
 }
 
 .bookmark {
     position: absolute;
     top: 0;
-    right: 0
+    left: 0
 }
 
 
@@ -57,8 +57,8 @@
     margin-bottom: 10px;
 }
 
-.card-container  .card .cat-price {
-    font-size: 14px;
+.cat-price {
+    font-size: 16px;
     font-weight: 500;
     color: #222222;
     text-transform: uppercase;
@@ -69,11 +69,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 24px;
+    margin-bottom: 20px;
 }
 
-.card-container  .card .cat-price-strike {
-    font-size: 12px;
+.cat-price-strike {
+    font-size: 10px;
     font-weight: 500;
     color: #9B9B9B;
     text-decoration: line-through;
@@ -112,3 +112,139 @@
 .MuiCardContent-root {
     padding: 0px !important;
 }
+
+.list-container {
+    display: grid;
+    /* flex-wrap: wrap; */
+    width: 100%;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    grid-gap: 10px;
+    overflow-y: auto;
+    padding: 10px;
+    height: calc(100vh - 270px);
+}
+
+.list-container .list {
+    width: 100%;
+    height: 120px;
+    box-shadow: 0px 3px 10px #00000029;
+    border-radius: 5px;
+    text-align: center;
+    position: relative;
+    display: flex;
+}
+
+.list-img {
+    width: 25%;
+    border-right: 1px solid #B9D0F2;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.list-img img {
+    width: 60%;
+    height: 60%;
+    object-fit: contain;
+}
+.list-content {
+    width: 50%;
+    /* border-right: 1px solid #B9D0F2; */
+    height: 100%;
+    padding: 10px;
+    background-color: #F5F7FC;
+}
+.list-price {
+    width: 25%;
+    height: 100%;
+    padding: 30px 10px 10px 10px;
+}
+
+.list .item-text {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: left;
+    margin-bottom: 16px;
+    color: #2D4263;
+}
+
+.list .sec-text {
+    text-transform: uppercase;
+    text-align: left;
+    margin-bottom: 16px;
+    font-size: 12px;
+}
+
+.list .ter-text {
+    text-align: left;
+    font-size: 10px;
+}
+
+.list-btn {
+    background-color: #2D4263 !important;
+    width: 50% !important;
+}
+
+.modal {
+    position: absolute; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    width: 780px; 
+    height: 546px;
+    border-radius: 12px; 
+    box-shadow: 24px; 
+    padding: 4px;
+    background-color: #fff;
+} 
+
+.modal-header {
+    padding: 10px;
+    border-bottom: 5px solid #D0D9E5;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.modal-heading {
+    font-size: 24px;
+    color: #717070;
+}
+
+.modal-body {
+    padding: 10px;
+    border-bottom: 5px solid #D0D9E5;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 350px;
+}
+
+.modal-img {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-img img {
+    width:20%;
+    height: 20%;
+    object-fit: contain;
+    margin-bottom: 40px;
+}
+
+.modal-item-text {
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 20px !important;
+}
+
+.modal-footer {
+    padding: 10px;
+}
+     

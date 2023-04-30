@@ -10,27 +10,36 @@ import BookmarkIcon from '@mui/icons-material/Bookmark';
 
 import ListOutlinedIcon from '@mui/icons-material/ListOutlined';
 import GridViewOutlinedIcon from '@mui/icons-material/GridViewOutlined';
+import CloseIcon from '@mui/icons-material/Close';
 
 import ButtonGroup from '@mui/material/ButtonGroup';
-
+import Modal from '@mui/material/Modal';
+import Box from '@mui/material/Box';
 import "./ProductDetails.css";
 
 function ProductDetails(){
-    const[state,setState]=useState([]);
-    let view = 'card';
-    const buttonClickHAndler = function(selectedView) {
-        view = selectedView;
-        console.log(view);
-    }  
+    const [state,setState]=useState([]);
+    const [viewState,setViewState]=useState('card');
+    const [selectedItemId, setSelectedItemId] = useState(null);
+
+    const handleRenderClick = (selectedItem) => setViewState(selectedItem);
+    const handleOpenModal = (id) => {
+        setSelectedItemId(id);
+    };
+    const handleCloseModal = () => {
+        setSelectedItemId(null);
+    };
+
     const buttons = [
-        <Button key="one" onClick={buttonClickHAndler('card')}>
+        <Button key="one" onClick={() => handleRenderClick('card')}>
             {<GridViewOutlinedIcon />}
         </Button>,
-        <Button key="two" onClick={buttonClickHAndler('list')}>
+        <Button key="two" onClick={() => handleRenderClick('list')}>
             {<ListOutlinedIcon />}          
         </Button>,
       ];
 
+      
    
     useEffect(()=>{
         fetch('https://fakestoreapi.com/products')
@@ -47,18 +56,23 @@ function ProductDetails(){
                     </ButtonGroup>
                 </div>
             </div>
-            <div className="card-container">
+                    
+            
+            <div className={viewState === 'card' ? 'card-container' : 'list-container'}>
                 {
                 state.map(item=> {
-                    if(view === 'card') {
+                    if(viewState === 'card') {
+                        <div>
+                        
+                    </div>  
                         return (
                             <Card  className="card" key={item.id}>
                                 <CardContent>
-                                    <div className="fav">
-                                        <Checkbox  icon={<FavoriteBorder />} checkedIcon={<Favorite />} />
-                                    </div>
                                     <div className="bookmark">
                                         <Checkbox icon={<BookmarkBorderIcon />} checkedIcon={<BookmarkIcon />}/>
+                                    </div>
+                                    <div className="fav">
+                                        <Checkbox  icon={<FavoriteBorder />} checkedIcon={<Favorite />} />
                                     </div>
                                     <img className="card-img" src={item.image} alt="productimage"></img>
                                     <div className="non-img-content">
@@ -68,17 +82,76 @@ function ProductDetails(){
                                             <div className="cat-price">$ {item.price}</div>
                                             <div className="cat-price-strike">$ {item.price}</div>
                                         </div>
-                                        <Button className="btn" variant="contained">Add</Button>
-                                    </div>    
+                                        <Button  onClick={() => handleOpenModal(item.id)} className="btn" variant="contained">Add</Button>
+                                    </div>   
+                                    <Modal
+                                        keepMounted
+                                        open={selectedItemId === item.id} onClose={handleCloseModal}
+                                    >
+                                        <Box className="modal">
+                                            <div className="modal-header">
+                                                <div className="modal-heading">
+                                                    Customise your order
+                                                </div>
+                                                <div>
+                                                    <CloseIcon onClick={handleCloseModal}/>
+                                                </div>
+                                            </div>
+                                            <div className="modal-body">
+                                                <div className="modal-img">
+                                                    <img  src={item.image} alt="productimage"></img>
+                                                    <div>
+                                                        <Typography className="modal-item-text" gutterBottom>{item.title}</Typography>
+                                                    </div>
+                                                    <div>
+                                                        Product price: <span className="cat-price">$ {item.price}</span>
+                                                    </div> 
+                                                </div>
+                                            </div>
+                                            <div className="modal-footer">
+                                            
+                                            </div>
+                                        </Box>
+                                    </Modal> 
                                 </CardContent>
                             </Card>
                         )
                     }  else {
-                    return (<div key={item.id}>
-                        test
-                    </div>)
-                    }        
-                    
+                        return (
+                            <div className="list" key={item.id}>
+                                 <div className="bookmark">
+                                    <Checkbox icon={<BookmarkBorderIcon />} checkedIcon={<BookmarkIcon />}/>
+                                </div>
+                                 <div className="fav">
+                                        <Checkbox  icon={<FavoriteBorder />} checkedIcon={<Favorite />} />
+                                </div>
+                                <div className="list-img">
+                                    <img  src={item.image} alt="productimage"></img>
+                                </div>
+                                <div className="list-content">
+                                    <Typography className="item-text" gutterBottom>{item.title}</Typography>
+                                    <Typography className="sec-text" gutterBottom>{item.category}</Typography>
+                                    <Typography className="ter-text" gutterBottom>{item.category}</Typography>
+                                </div>
+                                <div className="list-price">
+                                    <div className="price">
+                                            <div className="cat-price">$ {item.price}</div>
+                                            <div className="cat-price-strike">$ {item.price}</div>
+                                        </div>
+                                         <Button  onClick={() => handleOpenModal(item.id)} className="list-btn" variant="contained">Add</Button>
+                                </div>
+                                <Modal
+                                    keepMounted
+                                    open={selectedItemId === item.id} onClose={handleCloseModal}
+                                >
+                                    <Box className="modal">
+                                        {item.title}
+                                    </Box>
+                                </Modal> 
+                            </div>
+                        )
+                    } 
+                      
                 })}
                 
             </div>
