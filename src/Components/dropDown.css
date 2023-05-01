@@ -1,28 +1,43 @@
-fieldset {
+/* fieldset {
     border: none !important;
     background: #2D4263 !important;
     color: #fff !important;
     opacity: 0.4 !important;
-}
+} */
 
-.MuiPaper-root  {
+/* .MuiPaper-root  {
     box-shadow: none !important;
     border: none !important;
 }
 
-.menu-box {
-    overflow-y: auto;
-    height: calc(100vh - 180px);
-    margin: 0px 4px;
-    /* padding: 16px; */
+
+
+
+.MuiAccordionSummary-content {
+    margin: 0px !important;
+}
+
+.MuiAccordionSummary-root::before {
+    background-color: none !important;
+}
+
+.MuiButtonBase-root > .Mui-expanded {
+    background-color: #2D4263 !important;
+    color: #fff !important;
+} */
+
+.menu-box .topoption {
+    background-color: #2D4263 !important;
+    color: #fff !important;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 12px;
+    border-radius: 6px;
 }
 
 .Mui-expanded {
     box-shadow: none !important;
     margin: 0px !important;
     border: 1px solid #2D4263 !important;
-}
-
-.MuiAccordionSummary-content {
-    margin: 0px !important;
 }

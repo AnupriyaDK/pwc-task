@@ -1,9 +1,9 @@
-.header-container {
+.header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px 40px;
-  }
+}
   
   .logo {
     font-size: 24px;
@@ -32,17 +32,39 @@
     border: none;
   }
   .logo{
-    height: 10vh;
+    height: 50px;
   }
   .loginbtn{
     margin-left: 15px;
   }
-  input{
+  .input{
     margin-left: 10px;
+    font-size: 18px !important;
   }
   .username{
     margin-right: 10px;
   }
   .username{
     margin-right: 10px;
+  }
+
+  button[disabled] {
+    opacity: 0.3;
+  } 
+
+  img {
+    width: 100%;
+    object-fit: fill;
+  }
+
+  .zelda {
+    position: relative;
+  }
+
+  .zelda-heading {
+    font-size: 90px;
+    color: #fff;
+    position: absolute;
+    top: 35%;
+    left: 20%
   }

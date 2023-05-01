@@ -1,4 +1,5 @@
 import ArrowBackIosNewOutlinedIcon from '@mui/icons-material/ArrowBackIosNewOutlined';
+import CircularDeterminate from './progress/progress'
 import "./Navigation.css";
 function Navigation(){
     return(
@@ -13,8 +14,9 @@ function Navigation(){
             <div>Orders</div>
             <div>Zeldapro</div>
         </div>
-        <div>
+        <div className='align'>
             Loyality Scale
+            <CircularDeterminate />
         </div>
     </div>)
 }

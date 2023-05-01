@@ -1,11 +1,17 @@
 import './App.css';
 import ProductLayout from './Components/ProductLayout';
-// import Header from './Components/Header';
+import Home from "./Components/Home";
+import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
+
 function App() {
   return (
     <div className="App">
-      {/* <Header/> */}
-      <ProductLayout/>
+      <Router>
+          <Routes>
+            <Route exact path={"/"} element={<Home/>} />
+            <Route exact path={"/product"} element={<ProductLayout/>} />
+          </Routes>
+        </Router>
     </div>
   );
 }
