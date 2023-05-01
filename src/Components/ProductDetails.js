@@ -169,13 +169,57 @@ function ProductDetails(){
                                          <Button  onClick={() => handleOpenModal(item.id)} className="list-btn" variant="contained">Add</Button>
                                 </div>
                                 <Modal
-                                    keepMounted
-                                    open={selectedItemId === item.id} onClose={handleCloseModal}
-                                >
-                                    <Box className="modal">
-                                        {item.title}
-                                    </Box>
-                                </Modal> 
+                                        keepMounted
+                                        open={selectedItemId === item.id} onClose={handleCloseModal}
+                                    >
+                                        <Box className="modal">
+                                            <div className="modal-header">
+                                                <div className="modal-heading">
+                                                    Customise your order
+                                                </div>
+                                                <div>
+                                                    <CloseIcon onClick={handleCloseModal}/>
+                                                </div>
+                                            </div>
+                                            <div className="modal-body">
+                                                <div className="modal-img">
+                                                    <img  src={item.image} alt="productimage"></img>
+                                                    <div>
+                                                        <Typography className="modal-item-text" gutterBottom>{item.title}</Typography>
+                                                    </div>
+                                                    <div>
+                                                        Product price: <span className="cat-price">$ {item.price}</span>
+                                                    </div> 
+                                                </div>
+                                                <div className="option-selection">
+                                                    <div className="first-child">
+                                                        <BasicSelect />
+                                                    </div>
+                                                    <div className="text">
+                                                        Bottles per case
+                                                    </div>
+                                                    <div>
+                                                        <ToggleButtons />
+                                                    </div>
+                                                    <div className="text">
+                                                        Tablets per bottle
+                                                    </div>
+                                                    <div>
+                                                        <ToggleButtons />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div className="modal-footer">
+                                                <div>
+                                                Product Total: <b>$ 456.00</b> | Discount details
+                                                </div>
+                                                <div>
+                                                    Qty: &nbsp;<IncrementDecrementInput />
+                                                    <Button  className="btn-modal" variant="contained">Add</Button>
+                                                </div>
+                                            </div>
+                                        </Box>
+                                    </Modal> 
                             </div>
                         )
                     } 
