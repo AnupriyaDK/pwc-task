@@ -18,7 +18,7 @@ function IncrementDecrementInput(props) {
 
   return (
     <TextField
-      label={props.label}
+     
       variant={props.variant}
       value={value}
       type="number"
@@ -38,9 +38,9 @@ function IncrementDecrementInput(props) {
             </>
         ),
         inputProps: {
-          min: props.min,
+          min: 0,
           max: props.max,
-          step: props.step,
+          step: 1,
         },
       }}
       onChange={(event) => setValue(event.target.value)}

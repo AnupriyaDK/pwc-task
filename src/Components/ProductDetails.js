@@ -113,15 +113,29 @@ function ProductDetails(){
                                                     </div> 
                                                 </div>
                                                 <div className="option-selection">
-                                                    <BasicSelect />
-                                                    <ToggleButtons />
-                                                    <ToggleButtons />
+                                                    <div className="first-child">
+                                                        <BasicSelect />
+                                                    </div>
+                                                    <div className="text">
+                                                        Bottles per case
+                                                    </div>
+                                                    <div>
+                                                        <ToggleButtons />
+                                                    </div>
+                                                    <div className="text">
+                                                        Tablets per bottle
+                                                    </div>
+                                                    <div>
+                                                        <ToggleButtons />
+                                                    </div>
                                                 </div>
                                             </div>
                                             <div className="modal-footer">
-                                                <div></div>
                                                 <div>
-                                                    <IncrementDecrementInput />
+                                                Product Total: <b>$ 456.00</b> | Discount details
+                                                </div>
+                                                <div>
+                                                    Qty: &nbsp;<IncrementDecrementInput />
                                                     <Button  className="btn-modal" variant="contained">Add</Button>
                                                 </div>
                                             </div>
