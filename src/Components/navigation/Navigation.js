@@ -1,5 +1,5 @@
 import ArrowBackIosNewOutlinedIcon from '@mui/icons-material/ArrowBackIosNewOutlined';
-import CircularDeterminate from './progress/progress'
+import CircularDeterminate from '../progress/progress'
 import "./Navigation.css";
 function Navigation(){
     return(

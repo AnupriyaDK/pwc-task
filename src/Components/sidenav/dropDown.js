@@ -5,7 +5,7 @@ import AccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
-import CheckboxesGroup from  './checkBox/checkBox'
+import CheckboxesGroup from  '../checkBox/checkBox'
 import './dropDown.css';
 
 export default function SimpleAccordion() {

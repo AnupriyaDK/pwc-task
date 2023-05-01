@@ -12,10 +12,10 @@ import ListOutlinedIcon from '@mui/icons-material/ListOutlined';
 import GridViewOutlinedIcon from '@mui/icons-material/GridViewOutlined';
 import CloseIcon from '@mui/icons-material/Close';
 
-import BasicSelect from './select/select';
-import ToggleButtons from './toggle/toggle';
+import BasicSelect from '../select/select';
+import ToggleButtons from '../toggle/toggle';
 
-import IncrementDecrementInput from './count-box/countBox';
+import IncrementDecrementInput from '../count-box/countBox';
 
 import ButtonGroup from '@mui/material/ButtonGroup';
 import Modal from '@mui/material/Modal';

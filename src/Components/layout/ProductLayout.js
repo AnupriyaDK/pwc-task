@@ -1,9 +1,9 @@
 // import {  BottomNavigation } from '@material-ui/core';
-import ProductHeader from './ProductHeader'; 
-import ProductFooter from './ProductFooter';
-import ProductDetails from './ProductDetails';
-import Navigation from './Navigation';
-import Menu from './Menu';
+import ProductHeader from '../header/ProductHeader'; 
+import ProductFooter from '../footer/ProductFooter';
+import ProductDetails from '../productlist/ProductDetails';
+import Navigation from '../navigation/Navigation';
+import Menu from '../menu/Menu';
 import "./ProductLayout.css";
 
 function ProductLayout() {
